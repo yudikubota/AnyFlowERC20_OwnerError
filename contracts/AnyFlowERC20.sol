@@ -10,7 +10,7 @@ contract AnyFlowERC20 is ERC20, Ownable {
         uint256 _initialSupply,
         string memory _name,
         string memory _symbol
-    ) ERC20(_name, _symbol) Ownable(_initialOwner) {
+    ) ERC20(_name, _symbol) Ownable(msg.sender) {
         _mint(_initialOwner, _initialSupply);
     }
 }
